@@ -57,8 +57,11 @@ Below is a guide for how you should layout your Instagram feed. There is a sampl
 
 ## Additional Resources
 
-#### Angular 2 Documentation
-- Link: [Angular 2 Documentation](https://angular.io/)
+#### Angualar Slides
+- Link: [Angular Slides](http://slides.com/theremix/interactive-intro-angularjs#/)
+
+#### Angular Documentation
+- Link: [Angular 1.5 Documentation](https://docs.angularjs.org/)
 
 #### Instagram API Documentation
 - Link: [Instagram API Documentation](https://www.instagram.com/developer/endpoints/)
