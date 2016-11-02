@@ -12,11 +12,15 @@ Before you start building out your Angular 2 web application, you will need to s
     * Note: Your User ID is different than your User Name. Your User ID is a string that looks like `12345678`
     * Note: If you do not have an Instagram account, find an account that you enjoy and use their photos for your feed.
 
+  1. Create an `index.html` with an HTML5 template in a new directory, and fire up `http-server` we will need this in order to get our auth token.
+    * Start your server, and copy the URL.
+    * Go to your Manage Clients on the Instagram API settings, click `Manage` on your project, then click on the `Security Tab` and enter your server URL into the Valid Redirect URIs.
+
   1. This is the weird step - since we are making a client side web application, we need to get a [pre-approved access-token from Instagram](https://www.instagram.com/developer/authentication/). Here's how you do it:
 
-    * **Step One:** Direct your user to our authorization URL
+    * **Step One:** Direct your user to our authorization URL (Be sure to replace `CLIENT_ID` with your client ID and `REDIRECT_URI` with the url you pasted in the step above)
 
-          https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=token
+          https://api.instagram.com/oauth/authorize/?client_id=CLIENT_ID&redirect_uri=REDIRECT_URI&response_type=token
 
       At this point, we present the user with a login screen and then a confirmation screen where they grant your app’s access to their Instagram data. Note that unlike the explicit flow the response type here is “token”.
 
@@ -28,9 +32,9 @@ Before you start building out your Angular 2 web application, you will need to s
 
       Simply grab the access_token off the URL fragment and you’re good to go. If the user chooses not to authorize your application, you’ll receive the same error response as in the explicit flow
 
-  1. Once you get your **user id** and your **access_token**, try hitting this route to get your most recent Instagram photos.
+  1. Once you get your **user id** and your **access_token**, try hitting this route to get your most recent Instagram photos (Be sure to replace your `USER_ID` with your user ID and `ACCESS_TOKEN` with the access token you got in the step above).
 
-      https://api.instagram.com/v1/users/USER-ID/media/recent/?count=99&&callback=JSON_CALLBACK&access_token=ACCESS-TOKEN
+      https://api.instagram.com/v1/users/USER_ID/media/recent/?count=99&&callback=JSON_CALLBACK&access_token=ACCESS_TOKEN
 
   1. Now, you're ready to starting building your Instagram Feed in Angular 2.0 :sparkles:
 
