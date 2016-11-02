@@ -14,25 +14,25 @@ Before you start building out your Angular 2 web application, you will need to s
 
   1. This is the weird step - since we are making a client side web application, we need to get a [pre-approved access-token from Instagram](https://www.instagram.com/developer/authentication/). Here's how you do it:
 
-  1. **Step One:** Direct your user to our authorization URL
+    * **Step One:** Direct your user to our authorization URL
 
-        https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=token
+          https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=token
 
-    At this point, we present the user with a login screen and then a confirmation screen where they grant your app’s access to their Instagram data. Note that unlike the explicit flow the response type here is “token”.
+      At this point, we present the user with a login screen and then a confirmation screen where they grant your app’s access to their Instagram data. Note that unlike the explicit flow the response type here is “token”.
 
-  1. **Step Two:** Receive the access_token via the URL fragment
+    * **Step Two:** Receive the access_token via the URL fragment
 
-    Once the user has authenticated and then authorized your application, Instagram redirects them to your redirect_uri with the access_token in the url fragment. It will look like this:
+      Once the user has authenticated and then authorized your application, Instagram redirects them to your redirect_uri with the access_token in the url fragment. It will look like this:
 
-        http://your-redirect-uri#access_token=ACCESS-TOKEN
+          http://your-redirect-uri#access_token=ACCESS-TOKEN
 
-    Simply grab the access_token off the URL fragment and you’re good to go. If the user chooses not to authorize your application, you’ll receive the same error response as in the explicit flow
+      Simply grab the access_token off the URL fragment and you’re good to go. If the user chooses not to authorize your application, you’ll receive the same error response as in the explicit flow
 
-1. Once you get your **user id** and your **access_token**, try hitting this route to get your most recent Instagram photos.
+  1. Once you get your **user id** and your **access_token**, try hitting this route to get your most recent Instagram photos.
 
-    https://api.instagram.com/v1/users/USER-ID/media/recent/?count=99&&callback=JSON_CALLBACK&access_token=ACCESS-TOKEN
+      https://api.instagram.com/v1/users/USER-ID/media/recent/?count=99&&callback=JSON_CALLBACK&access_token=ACCESS-TOKEN
 
-1. Now, you're ready to starting building your Instagram Feed in Angular 2.0 :sparkles:
+  1. Now, you're ready to starting building your Instagram Feed in Angular 2.0 :sparkles:
 
 ## Style Guide
 
