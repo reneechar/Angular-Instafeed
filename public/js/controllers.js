@@ -5,22 +5,15 @@ angular.module('myApp')
       $scope.photoArr = [];
       $scope.display = 'grid';
 
-      $scope.trustedUrls = [];
-
       PhotoService.getPhotos().success((photo) => {
-        $scope.photoArr = photo.data;
-        photo.data.forEach(img => {
-          if(img.type === 'video') {
-            $scope.trustedUrls.push($sce.trustAsResourceUrl(img.videos.standard_resolution.url));
-            console.log('length',$scope.trustedUrls.length);
+        console.log(photo)
+        for (var i = 0; i < photo.data.length; i++) {
+          if(photo.data[i].type === 'video') {
+            photo.data[i].videos.standard_resolution.url = $sce.trustAsResourceUrl(photo.data[i].videos.standard_resolution.url)
           }
-        })
+        }
+        $scope.photoArr = photo.data;
       })
-
-      $scope.getVidUrl = () => {
-        console.log('getting')
-        return $scope.trustedUrls.shift()
-      }
 
       $scope.listView = () => {
           $scope.display = PhotoService.listView();

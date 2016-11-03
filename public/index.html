@@ -31,7 +31,7 @@
                   <img ng-src={{photo.images.low_resolution.url}} />
                 </div>
                 <div ng-switch-when="video">
-                  <video loop width="300" height="320" autoplay="autoplay" ng-src={{getVidUrl()}}>
+                  <video loop width="300" height="320" autoplay="autoplay" controls ng-src={{photo.videos.standard_resolution.url}}>
                   </video>
                 </div>
               </div>
@@ -42,7 +42,15 @@
           <ul class='photoList' >
             <li class='photoItems' id="list" ng-repeat="photo in photoArr">
               <div id="listImage">
-                <img ng-src={{photo.images.low_resolution.url}} />
+                <div ng-switch="photo.type">
+                  <div ng-switch-when="image">
+                    <img ng-src={{photo.images.low_resolution.url}} />
+                  </div>
+                  <div ng-switch-when="video">
+                    <video loop width="300" height="320" autoplay="autoplay" controls ng-src={{photo.videos.standard_resolution.url}}>
+                    </video>
+                  </div>
+                </div>
               </div>
               <div id="listDescription">
                 <div>
