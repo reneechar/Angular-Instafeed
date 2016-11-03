@@ -1,3 +1,4 @@
+
 .photoList {
   display: flex;
   flex-flow: row wrap;
@@ -22,47 +23,67 @@
 }
 
 #header {
-  background: lightblue;
+  background: #70AFC4;
   padding: 10px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  border-radius: 5px;
 }
 
 #title {
   flex: 0 0 60px;
-}
 
+}
+#title p {
+  color: white;
+  text-shadow: 1px 1px #8CCCBE;
+}
 #gridView {
-  width: 30px;
-  height: 30px;
-  background: blue;
+  width: 40px;
+  height: 40px;
+  background: white url('https://cdn0.iconfinder.com/data/icons/thin-gui-elements-1/24/thin-0208_grid_view-512.png');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  border: 3px solid #8CCCBE;
+  box-sizing: border-box;
   display: flex;
-  flex-flow: row wrap;
   margin: 3px;
-  justify-content: center;
-  align-items: center;
-}
-
-.bar {
-  height: 8px;
-  margin: 0px 2px;
-  background: white;
-  flex: 0 0 8px;
 }
 
 #listView {
-  width: 30px;
-  height: 30px;
-  background: blue;
-  display: inline-block;
-  margin: 2px;
+  width: 40px;
+  height: 40px;
+  background: white url("https://cdn3.iconfinder.com/data/icons/line/36/list_alt-512.png");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  border: 3px solid #8CCCBE;
+  box-sizing: border-box;
+  display: flex;
+  margin: 3px;
+}
+a:hover #listView {
+  background: #8CCCBE url("https://cdn3.iconfinder.com/data/icons/line/36/list_alt-512.png");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition-duration: 1s;
+}
+a:hover #gridView {
+  background: #8CCCBE url("https://cdn0.iconfinder.com/data/icons/thin-gui-elements-1/24/thin-0208_grid_view-512.png");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition-duration: 1s;
 }
 
 #views {
   flex: 0 0 80px;
-  height: 30px;
   display: flex;
 }
 
