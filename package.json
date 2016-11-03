@@ -1,0 +1,23 @@
+{
+  "name": "angular-instafeed",
+  "version": "1.0.0",
+  "description": "Make a personal Instagram Feed on a switchable grid with the Instagram API.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reneechar/Angular-Instafeed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reneechar/Angular-Instafeed/issues"
+  },
+  "homepage": "https://github.com/reneechar/Angular-Instafeed#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
