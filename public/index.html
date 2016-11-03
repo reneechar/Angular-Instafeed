@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Insta Feed</title>
+  <link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body ng-app="myApp">
+  <div id='root'>
+    <div id='header'>
+      <span id='title'>
+        <p>InstaFeed</p>
+      </span>
+      <span id='views'>
+        <span id='gridView'>
+          <span class='bar'></span>
+          <span class='bar'></span>
+          <span class='bar'></span>
+          <span class='bar'></span>
+        </span>
+        <span id='listView'>
+          <span class='listLeftBar'></span>
+          <span class='listRightBar'></span>
+          <span class='listRightBar'></span>
+          <span class='listRightBar'></span>
+        </span>
+      </div>
+    </span>
+    <div id='container' ng-controller="myController">
+      <ul class='photoList'>
+        <li class='photoItems' ng-repeat="photo in photoArr">
+          <img ng-src={{photo.images.low_resolution.url}} />
+        </li>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+  <script src="js/myApp.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/services.js"></script>
+</body>
+</html>

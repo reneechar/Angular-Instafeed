@@ -1,0 +1,76 @@
+.photoList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+}
+
+.photoItems {
+  flex: 0 0 250px;
+  list-style: none;
+  margin: 10px;
+}
+
+#root {
+  width: 700px;
+  margin: 0 auto;
+}
+
+#container {
+  margin: 0 auto;
+}
+
+#header {
+  background: lightblue;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#title {
+  flex: 0 0 60px;
+}
+
+#gridView {
+  width: 30px;
+  height: 30px;
+  background: blue;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 3px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar {
+  height: 8px;
+  margin: 0px 2px;
+  background: white;
+  flex: 0 0 8px;
+}
+
+#listView {
+  width: 30px;
+  height: 30px;
+  background: blue;
+  display: inline-block;
+  margin: 2px;
+}
+
+#views {
+  flex: 0 0 80px;
+  height: 30px;
+  display: flex;
+}
+
+img {
+  width: 300px;
+}
+
+body {
+  font-family: 'Khula', sans-serif;
+}
+
