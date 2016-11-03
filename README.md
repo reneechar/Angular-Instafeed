@@ -3,7 +3,7 @@ Make a personal Instagram Feed on a switchable grid with the Instagram API.
 
 You will be creating a Instagram feed using the Instagram API and Angular 1.5. The feed will feature a switchable grid to change the layout of the photos on the page [see Style Guide below for details].
 
-Before you start building out your Angular 2 web application, you will need to sign up to be an Instagram Developer:
+Before you start building out your Angular web application, you will need to sign up to be an Instagram Developer:
 
   1. First go [register as an Instagram Developer](https://instagram.com/developer/clients/manage/) to get your Client ID.
 
