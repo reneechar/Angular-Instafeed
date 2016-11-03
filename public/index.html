@@ -6,26 +6,59 @@
   <link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
-<body ng-app="myApp">
+<body ng-app="myApp" ng-controller="myController">
   <div id='root'>
     <div id='header'>
       <span id='title'>
         <p>InstaFeed</p>
       </span>
       <span id='views'>
-        <a href="/">
+        <a href="#" ng-click="gridView()">
           <span id='gridView'></span>
         </a>
-        <a href="/">
+        <a href="#" ng-click="listView()">
           <span id='listView'></span>
         </a>
       </div>
     </span>
-    <div id='container' ng-controller="myController">
-      <ul class='photoList'>
-        <li class='photoItems' ng-repeat="photo in photoArr">
-          <img ng-src={{photo.images.low_resolution.url}} />
-        </li>
+    <div id='container' >
+      <div ng-switch="display">
+        <div ng-switch-when="grid">
+          <ul class='photoList' id="gridCenter">
+            <li class='photoItems' id="grid" ng-repeat="photo in photoArr">
+              <div ng-switch="photo.type">
+                <div ng-switch-when="image">
+                  <img ng-src={{photo.images.low_resolution.url}} />
+                </div>
+                <div ng-switch-when="video">
+                  <video loop width="300" height="320" autoplay="autoplay" ng-src={{getVidUrl()}}>
+                  </video>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div ng-switch-when="list">
+          <ul class='photoList' >
+            <li class='photoItems' id="list" ng-repeat="photo in photoArr">
+              <div id="listImage">
+                <img ng-src={{photo.images.low_resolution.url}} />
+              </div>
+              <div id="listDescription">
+                <div>
+                  <h4>{{photo.caption.text}}</h4>
+                  <h5>likes: {{photo.likes.count}}</h5>
+                <div>
+                <ul class='hashtags'>
+                  <li ng-repeat="tag in photo.tags" class='tag'>#{{tag}}</li>
+                </div>
+
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>

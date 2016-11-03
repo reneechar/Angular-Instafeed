@@ -1,5 +1,5 @@
 
-.photoList {
+.photoList,#grid{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -7,8 +7,22 @@
   padding: 0;
 }
 
-.photoItems {
+.photoList,#list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  list-style-type: none;
+  padding: 0;
+}
+
+.photoItems,#grid {
   flex: 0 0 250px;
+  list-style: none;
+  margin: 10px;
+}
+
+.photoItems,#list {
+  flex: 0 0 100%;
   list-style: none;
   margin: 10px;
 }
@@ -95,3 +109,28 @@ body {
   font-family: 'Khula', sans-serif;
 }
 
+#list > #listImage {
+  flex: 0 0 320px;
+}
+#list > #listDescription {
+  flex: 0 0 350px;
+}
+
+.hashtags {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tag {
+  background: #8CCCBE;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 8px;
+}
+
+#gridCenter {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
