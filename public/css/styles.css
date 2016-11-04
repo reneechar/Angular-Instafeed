@@ -53,6 +53,7 @@
 #title p {
   color: white;
   text-shadow: 1px 1px #8CCCBE;
+  font-size: 20px;
 }
 #gridView {
   width: 40px;
@@ -129,8 +130,10 @@ body {
   padding: 5px 8px;
 }
 
+.search {
+  padding: 30px 0 0 0;
+}
+
 #gridCenter {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
